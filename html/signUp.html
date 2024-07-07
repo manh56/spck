@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="login">
+      <div class="login-container">
+        <h2 class="login-heading">Sign up</h2>
+        <p class="login-desc">If you already have an account register</p>
+        <p class="login-register">
+          You can <a href="./signIn.html">Sign in here !</a>
+        </p>
+        <div class="login-social">
+          <a class="login-google" href="">
+            <img src="../img/google.svg" alt="" />
+            <span>Sign up with Google</span>
+          </a>
+          <a class="login-facebook" href="">
+            <img src="../img/Facebook.svg" alt="" />
+          </a>
+          <a class="login-apple" href="">
+            <img src="../img/apple.svg" alt="" />
+          </a>
+        </div>
+        <form id="form">
+          <div class="success-message">Registry successfully</div>
+          <div class="error-message">Registry failed</div>
+
+          <div class="form-control">
+            <!-- Add has-error class when an error occurs -->
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+            <span class="input-error">Error</span>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="off"
+            />
+            <span class="input-error">Error</span>
+          </div>
+          <div class="form-control">
+            <label for="confirm-password">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm your Password"
+              id="confirm-password"
+              autocomplete="off"
+            />
+            <span class="input-error">Error</span>
+          </div>
+          <button class="login-button" type="submit">
+            <span class="login-button-text">Register</span>
+            <span class="loader"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"
+    ></script>
+    <script
+      defer
+      src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"
+    ></script>
+
+    <script defer src="../js/config.js"></script>
+    <script type="module" src="../js/signUp.js"></script>
+  </body>
+</html>
